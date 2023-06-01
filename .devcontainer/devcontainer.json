@@ -1,0 +1,11 @@
+{
+	"name": "TeX Live base",
+	"build": { "dockerfile": "Dockerfile" },
+	"extensions": [
+		"james-yu.latex-workshop",
+		"usernamehw.errorlens",
+		"znck.grammarly"
+	],
+	"remoteuser": "vscode",
+	"postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}"
+}
