@@ -5,9 +5,9 @@ This template repository provides a path to creating local LaTeX documents.
 This requires an opinionated stack of tools, and as such, I have decided to use the following:
 
 - VSCode: for its ability to have plugins and integration with GitHub and cruciallly, with its ability to use `Dev Containers` and work within a `Docker` container
-- Grammarly: Provided as an extension in the `.devcontainer` which VSCode will then launch. It will prompt you to login
 - LaTeX Workshop: To build the document locally and provide autocompletion
 - Error Lens: Highlights the errors from Grammarly and LaTeX build in the source code.
+- Githubu Copilot to aid in writing latex and equations
 
 # Workflow
 To use this framework, follow these steps:
