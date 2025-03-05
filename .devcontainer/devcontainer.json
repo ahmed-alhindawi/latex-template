@@ -1,11 +1,23 @@
 {
 	"name": "TeX Live base",
 	"build": { "dockerfile": "Dockerfile" },
-	"extensions": [
-		"james-yu.latex-workshop",
-		"usernamehw.errorlens",
-		"znck.grammarly"
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"GitHub.copilot",
+				"james-yu.latex-workshop",
+				"usernamehw.errorlens"
+			]
+		}
+	},
+	"runArgs": [
+		"--rm",
+		"--security-opt=label=disable"
 	],
-	"remoteuser": "vscode",
-	"postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}"
+	"containerUser": "root",
+    "remoteUser": "root",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+    "workspaceFolder": "/workspace"
+	// "remoteuser": "vscode",
+	// "postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}"
 }
